@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,6 +6,10 @@
     <title>Poke</title>
   </head>
   <body>
+    <section>
+      포켓몬 ID : <input id="pokeId" type="number" min="1" />
+      <button id="pokeBtn">검색</button>
+    </section>
     <script>
       // 1. API에서 데이터 호출하기
       async function getPokemon(id) {
@@ -32,7 +36,11 @@
           data2.names.filter((v) => v.language.name === "ko")[0].name
         );
       }
-      getPokemon(1);
+      //   getPokemon(1);
+      // 2. input 통해 번호 바꿔보기
+      const pokeBtn = document.querySelector("#pokeBtn");
+      const pokeId = document.querySelector("#pokeId");
+      pokeBtn.addEventListener("click", () => getPokemon(pokeId.value));
     </script>
   </body>
 </html>
