@@ -135,8 +135,11 @@
             <h4>${koName}</h4>
             <h5>${engName}</h5>
             <img src="${shape}">
-            <audio src="${sound}" controls></audio>
+            <audio id="poke-audio" src="${sound}" controls></audio>
         `;
+        // 볼륨 50%로 고정
+        const audio = document.getElementById("poke-audio");
+        if (audio) audio.volume = 0.5;
       }
       // 4. 직전 검색 데이터를 Storage. 자동 로딩.
       document.addEventListener("DOMContentLoaded", () => {
