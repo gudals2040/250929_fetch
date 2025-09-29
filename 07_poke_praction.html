@@ -4,6 +4,80 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Poke</title>
+    <style>
+      body {
+        min-height: 100vh;
+        margin: 0;
+        font-family: "Press Start 2P", "Consolas", "monospace";
+        background: linear-gradient(135deg, #a2d4f7 0%, #f7e6a2 100%);
+        background-image: url("https://assets.pokemon.com/static2/_ui/img/chrome/body_bg.png");
+        background-size: cover;
+        color: #2d2d2d;
+      }
+      section {
+        background: rgba(255, 255, 255, 0.85);
+        border-radius: 16px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        padding: 24px;
+        margin: 32px auto;
+        max-width: 400px;
+        text-align: center;
+      }
+      input[type="number"] {
+        font-size: 1.1em;
+        border: 2px solid #ffcb05;
+        border-radius: 8px;
+        padding: 6px 12px;
+        width: 80px;
+        background: #fff;
+        margin-right: 8px;
+      }
+      button {
+        font-family: inherit;
+        font-size: 1.1em;
+        background: #3b4cca;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        padding: 8px 18px;
+        cursor: pointer;
+        box-shadow: 0 2px 8px rgba(59, 76, 202, 0.15);
+        transition: background 0.2s;
+      }
+      button:hover {
+        background: #2a2fa0;
+      }
+      #pokeBox {
+        margin-top: 16px;
+      }
+      #pokeBox h4 {
+        font-size: 1.5em;
+        color: #d62828;
+        margin-bottom: 0.2em;
+        letter-spacing: 2px;
+      }
+      #pokeBox h5 {
+        font-size: 1.1em;
+        color: #3b4cca;
+        margin-top: 0;
+        margin-bottom: 0.8em;
+      }
+      #pokeBox img {
+        width: 120px;
+        height: 120px;
+        image-rendering: pixelated;
+        border: 4px solid #ffcb05;
+        border-radius: 50%;
+        background: #fff;
+        margin-bottom: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      #pokeBox audio {
+        width: 100%;
+        margin-top: 10px;
+      }
+      @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+    </style>
   </head>
   <body>
     <section>
