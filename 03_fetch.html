@@ -7,9 +7,10 @@
   </head>
   <body>
     <input type="text" id="userId" placeholder="유저 ID 입력" />
-    <button id="userIDBtn">검색</button>
+    <button id="userIDBtn">조회</button>
     <!-- https://jsonplaceholder.typicode.com/  -->
     <script>
+      // XMLHttpRequest -> fetch (axios, ky...)
       // Promise -> 원래 흐름과 별도로 외부 네트워크의 종료 여부를 알아서 처리
       const response = fetch("https://jsonplaceholder.typicode.com/users/1");
       console.log(response);
@@ -40,6 +41,7 @@
       // fetchUser();  // 어떨 때 호출이 되는가? -> Event. -> Button, Form -> 네트워크 요청
       // Listener -> Callback (Handler 함수) -> async. + await.
       document.querySelector("#userIDBtn").addEventListener("click", fetchUser);
+      // 함수를 넣어줘야함 (() 빼고)
     </script>
   </body>
 </html>
